@@ -1,0 +1,10 @@
+var a = 100;
+
+switch (a) {
+	case 100:
+		print "wow" + "wow2";
+	case 101:
+		print "wow2";
+	default:
+		print "default";
+}

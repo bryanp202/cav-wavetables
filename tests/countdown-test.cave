@@ -1,0 +1,11 @@
+fun until0(x) {
+	if (x < 0) {
+		print "done";
+		return;	
+	}
+	print x;
+	until0(x-1);
+	print x;
+}
+
+until0(200);

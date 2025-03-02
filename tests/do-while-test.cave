@@ -1,0 +1,16 @@
+var test1 = false;
+var test2 = true;
+if (test1) {
+	do {
+		var i = 10233;
+		var i1 = 23423;
+		break;
+		print 100;
+	} while (false);
+} elif (test2) {
+	for (var i = 0; i < 10; i+=1) {
+		print i;	
+	}
+} else {
+	print "womp";
+}

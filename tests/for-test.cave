@@ -1,0 +1,17 @@
+var y = 0;
+
+for (var i = 0; i < 100000000; i += 1) {
+	var fuck;
+	var fuck2;
+	if (i % 3 == 0) {{{
+		var cool = i * i;
+		continue;
+	}}}
+	if (i == 98000000) {{{{
+		var cool2;
+		break;
+	}}}}
+	//print i;
+}
+
+print "done";

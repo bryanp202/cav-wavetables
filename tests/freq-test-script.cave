@@ -1,0 +1,6 @@
+for (var i = 0; i < 256; i+=1) {
+	editFreq(MAIN_B, i, i+1, 1, i + 2, "1/(index)");
+}
+editWav(MAIN_B, 0, 256, 0, 2048, "sin(2*M_PI*main_t(frame,index))"); //(6 * frame / FRAME_MAX + 1) *
+editFreq(MAIN_B, 0, 256, 0, 1, "456");
+exportWav(MAIN_B, "../tests/freq-test.wav");

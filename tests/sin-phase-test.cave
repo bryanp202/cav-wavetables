@@ -1,0 +1,4 @@
+editWav(MAIN_B, 0, 256, 0, 2048, "sin(16*M_PI*index/FRAME_LEN)");
+for (var i = 0; i < 256; i+=1)
+	editPhase(MAIN_B, i, i+1, 0, 1025, "2 * M_PI * ${i/256}");
+exportWav(MAIN_B, "../tests/sin-phase.wav", 16);

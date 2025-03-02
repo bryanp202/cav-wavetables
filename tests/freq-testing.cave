@@ -1,0 +1,4 @@
+editFreq(MAIN_B, 0, 1, 1, 1025, "1/(index)");
+for (var i = 1; i < 256; i+=1)
+	editFreq(MAIN_B, i, i+1, 1, 1025, "(index%${i+1}==1)?1/(index):0");
+exportWav(MAIN_B, "../tests/weird-freq.wav");

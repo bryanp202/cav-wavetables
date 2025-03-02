@@ -1,0 +1,17 @@
+var x = 1.00001;
+var n = 9285714;
+var product = 1;
+
+if (n >= 0) {
+	while (n > 0) {
+		product *= x;
+		n -= 1;
+	}
+} else {
+	while (n < 0) {
+		product /= x;
+		n += 1;	
+	}
+}
+
+print product;

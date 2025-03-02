@@ -1,0 +1,7 @@
+// FM
+editWav(AUX1_B, 0, FRAME_LAST, 0, FRAME_LEN, "sin(2*M_PI*index/FRAME_LEN)");
+editWav(MAIN_B, 0, FRAME_LAST, 0, FRAME_LEN, "aux1_t(frame, index + 4000 * (frame/FRAME_MAX) * sin(2*M_PI*index/FRAME_LEN))");
+// WINDOW
+//editWav(AUX1_B, 0, 256, 0, 2048, "sin(3*M_PI*index/FRAME_LEN)");
+//editWav(MAIN_B, 0, 256, 0, 2048, "main_t(frame,index) * aux1_t(frame,index)");
+exportWav(MAIN_B, "../tests/different-fm-interpolated.wav", MED_Q);

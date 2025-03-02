@@ -1,0 +1,4 @@
+editFreq(MAIN_B, 0, 256, 1, 1025, "1/index");
+//editDC(MAIN_B, 0, 256, "frame/FRAME_MAX * 10");
+editPhase(MAIN_B, 0, 256, 1, 1025, "2*M_PI*index*frame/FRAME_MAX");
+exportWav(MAIN_B, "../tests/rotate.wav", 16);

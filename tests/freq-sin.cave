@@ -1,0 +1,3 @@
+for (var i = 0; i < 256; i+=1)
+	editFreq(MAIN_B, i, i+1, 1, i + 2, "1/index * sin(M_PI/2*(index-1)/${i+1} + M_PI/2)");
+exportWav(MAIN_B, "../tests/sine-waves.wav", HIGH_Q);

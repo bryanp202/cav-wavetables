@@ -1,0 +1,10 @@
+fun a(param1) {
+	var cool = 100;
+	fun b(param1) {
+		print "in function b now with param1 = ${param1}";
+	}
+	b(param1);
+	b("haha");
+}
+
+a(123456789);

@@ -1,0 +1,10 @@
+editWav(MAIN_B, 0, 256, 0, 2048, "sin(2*M_PI*index/FRAME_LEN)");
+for (var i = 1; i < 256; i+=1) {
+	editWav(MAIN_B, i, 256, 0, 2048, "sin(2*M_PI*index/FRAME_LEN + ${1 + 0.999*(i)/255} * main_t(frame, index))");
+}
+editDC(MAIN_B, 0, 256, "0");
+exportWav(MAIN_B, "../tests/inception-freq.wav", 32, 256);
+editPhase(MAIN_B, 0, 256, 1, 1025, "M_PI");
+frameNorm(MAIN_B, 0, 256);
+exportWav(MAIN_B, "../tests/inception-freq-with-phase.wav", 32, 256);
+exportWav(MAIN_B, "../tests/inception-freq-with-phase-less-frames.wav", 32, 16);

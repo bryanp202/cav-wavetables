@@ -1,0 +1,10 @@
+var a = 1;
+var b = 0;
+var c = 0;
+var d = 0;
+var i = 0;
+while (i < 20) {
+	a = d + (d = c) + (c = b) + (b = a);
+	if (d % 2 == 0) print d;
+	i += 1;
+}

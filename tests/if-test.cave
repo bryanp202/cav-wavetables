@@ -1,0 +1,5 @@
+var a = "cool";
+a = "wow";
+if (a == "wow") print 0;
+elif (a == "cool") print 1;
+else print 2;

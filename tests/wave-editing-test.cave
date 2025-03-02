@@ -1,0 +1,7 @@
+var start = clock();
+for (var i = 1; i < 51; i += 1) {
+	editWav(MAIN_B, 0, FRAME_LAST, 0, 2048, "sin(2*M_PI*index/2048 + frame/FRAME_MAX * ${i*4}*sin(2*M_PI*index/2048))");
+}
+print (clock() - start);
+exportWav(MAIN_B, "../tests/fm.wav");
+print(clock() - start);

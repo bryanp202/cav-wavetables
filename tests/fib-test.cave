@@ -1,0 +1,18 @@
+var start = clock();
+fun fib(num) {
+	var a = 0;
+	var b = 1;
+	while (num > 0) {
+		var temp = a + b;
+		a = b;
+		b = temp;
+		num -= 1;
+	}
+	return a;
+}
+var fibSeq = "";
+for (var i = 1; i < 300; i+=1) {
+	fibSeq += "${fib(i)},";
+}
+print fibSeq;
+print "Runtime was ${clock() - start} s";

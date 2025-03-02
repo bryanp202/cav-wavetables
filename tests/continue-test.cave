@@ -1,0 +1,18 @@
+var i = 0;
+var sum = 0;
+while (i < 100) {
+	i += 1;
+	var cool = 202;
+	{
+		var wow = 100;
+		{
+			var wow2 = 102302130;
+			if (i % 2 == 0) continue;
+		}
+		if (i % 2 == 0) break;
+	}
+	if (i % 51 == 0) break;
+	sum += i;
+	print i;
+}
+print sum;
