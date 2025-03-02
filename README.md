@@ -13,7 +13,7 @@ Example:<br>
 Save the following to file "test.cave"<br>
 and then run "cave.exe .\test.cave" in desired output directory<br>
 
-/*<br>
+/\*<br>
     When providing a string equation for a native function, all globals and functions can be used<br>
     The local variables "index" and "frame" will be accessible<br>
     "index": current index in the current frame<br>
@@ -22,7 +22,7 @@ and then run "cave.exe .\test.cave" in desired output directory<br>
 	ex: (sin(M_PI * 2 * index / FRAME_LEN * (1 + 6 * frame / FRAME_MAX)))<br>
 	will create a sin wav that goes from 1 period per frame at frame 1<br>
 	to 6 periods per a frame at frame 256<br>
-*/<br>
+\*/<br>
 <br>
 // Edit Time Domain Call arguments "editWav"<br>
 // Target buffer (MAIN_B | AUX1_B), Sample bit size (8 | 16 | 32), Minframe [0-255], Maxframe [1-256], Min index [0-2047]<br>
