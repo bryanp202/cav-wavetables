@@ -18,10 +18,10 @@ and then run "cave.exe .\test.cave" in desired output directory
     The local variables "index" and "frame" will be accessible
     "index": current index in the current frame
         ex: sin(M_PI * 2 * index / FRAME_LEN) will create a sin with 1 period per frame
-	"frame": current frame being processed
-	    ex: (sin(M_PI * 2 * index / FRAME_LEN * (1 + 6 * frame / FRAME_MAX)))
-		will create a sin wav that goes from 1 period per frame at frame 1
-		to 6 periods per a frame at frame 256
+    "frame": current frame being processed
+	ex: (sin(M_PI * 2 * index / FRAME_LEN * (1 + 6 * frame / FRAME_MAX)))
+	will create a sin wav that goes from 1 period per frame at frame 1
+	to 6 periods per a frame at frame 256
 */
 
 // Edit Time Domain Call arguments "editWav"
