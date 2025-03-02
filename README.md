@@ -42,7 +42,7 @@ editDC(MAIN_B, 0, 256, "0");<br>
 <br>
 // Export wav function call arguments<br>
 // Target buffer (MAIN_B | AUX1_B), Sample Bit size (8 | 16 | 32), Num of Frames ()<br>
-exportWav(MAIN_B, "../tests/inception-freq.wav", 32, 256);<br>
+exportWav(MAIN_B, "inception-freq.wav", 32, 256);<br>
 <br>
 // Edit Phase Call arguments<br>
 // Target buffer (MAIN_B | AUX1_B), Sample bit size (8 | 16 | 32), Minframe [0-255], Maxframe [1-256], Min partial [1-1024]<br>
@@ -54,5 +54,5 @@ editPhase(MAIN_B, 0, 256, 1, 1025, "M_PI");<br>
 frameNorm(MAIN_B, 0, 256);<br>
 <br>
 
-exportWav(MAIN_B, "../tests/inception-freq-with-phase.wav", 32, 256);<br>
-exportWav(MAIN_B, "../tests/inception-freq-with-phase-less-frames.wav", 32, 16);<br>
+exportWav(MAIN_B, "inception-freq-with-phase.wav", 32, 256);<br>
+exportWav(MAIN_B, "inception-freq-with-phase-less-frames.wav", 32, 16);<br>
