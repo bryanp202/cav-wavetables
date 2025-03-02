@@ -15,9 +15,9 @@ and then run "cave.exe .\test.cave" in desired output directory<br>
 
 /\*<br>
     When providing a string equation for a native function, all globals and functions can be used<br>
-    The local variables "index" and "frame" will be accessible<br>
+    The local variables "index" and "frame" will be accessible<br><br>
     "index": current index in the current frame<br>
-        ex: sin(M_PI * 2 * index / FRAME_LEN) will create a sin with 1 period per frame<br>
+        ex: sin(M_PI * 2 * index / FRAME_LEN) will create a sin with 1 period per frame<br><br>
     "frame": current frame being processed<br>
 	ex: (sin(M_PI * 2 * index / FRAME_LEN * (1 + 6 * frame / FRAME_MAX)))<br>
 	will create a sin wav that goes from 1 period per frame at frame 1<br>
