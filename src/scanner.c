@@ -218,12 +218,24 @@ static Token identifier(Scanner* scanner) {
 static Token number(Scanner* scanner) {
     while (isDigit(peek(scanner))) advance(scanner);
 
-    // Look for decimal point
-    if (peek(scanner) == '.' && isDigit(peekNext(scanner))) {
+    // Check for scientific notation
+    if (match(scanner, 'e')) {
+        match(scanner, '-') || match (scanner, '+');
+        
+        if (!isDigit(peek(scanner))) return errorToken(scanner, "Invalid scientific notation");
+        while(isDigit(peek(scanner))) advance(scanner);
+    } else if (peek(scanner) == '.' && isDigit(peekNext(scanner))) { // Look for decimal point
         // Consume '.'
         advance(scanner);
 
         while(isDigit(peek(scanner))) advance(scanner);
+
+        if (match(scanner, 'e')) {
+            match(scanner, '-') || match (scanner, '+');
+            
+            if (!isDigit(peek(scanner))) return errorToken(scanner, "Invalid scientific notation");
+            while(isDigit(peek(scanner))) advance(scanner);
+        }
     }
 
     return makeToken(scanner, TOKEN_NUMBER);
