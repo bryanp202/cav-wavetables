@@ -281,7 +281,7 @@ static bool invalidBuffType(Value buffer_type) {
 static NativeFnReturn frameNormalizeNative(int argCount, Value* args) {
     // Type check
     if (!IS_NUMBER(args[0]) || !IS_NUMBER(args[1]) || !IS_NUMBER(args[2])) {
-        runtimeError("frameNorm: expect editDC(number, number, number)");
+        runtimeError("frameNorm: expect frameNorm(BUFFER, MIN_FRAME, MAX_FRAME)");
         return NATIVE_FAIL();
     }
     // Check buffer type
