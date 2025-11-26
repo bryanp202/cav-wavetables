@@ -63,6 +63,26 @@ static NativeFnReturn roundNative(int argCount, Value *args) {
     return NATIVE_SUCCESS(NUMBER_VAL(round(AS_NUMBER(args[0]))));
 }
 
+// Floor
+// Arity 1
+static NativeFnReturn floorNative(int argCount, Value *args) {
+    if (!IS_NUMBER(args[0])) {
+        runtimeError("floor: Expect floor(number)");
+        return NATIVE_FAIL();
+    }
+    return NATIVE_SUCCESS(NUMBER_VAL(floor(AS_NUMBER(args[0]))));
+}
+
+// Ceil
+// Arity 1
+static NativeFnReturn ceilNative(int argCount, Value *args) {
+    if (!IS_NUMBER(args[0])) {
+        runtimeError("ceil: Expect ceil(number)");
+        return NATIVE_FAIL();
+    }
+    return NATIVE_SUCCESS(NUMBER_VAL(ceil(AS_NUMBER(args[0]))));
+}
+
 // Sqrt
 // Arity 1
 static NativeFnReturn sqrtNative(int argCount, Value *args) {
@@ -797,6 +817,8 @@ void initVM() {
     defineNative("len", lenNative, 1);
     defineNative("type", typeNative, 1);
     defineNative("round", roundNative, 1);
+    defineNative("floor", floorNative, 1);
+    defineNative("ceil", ceilNative, 1);
     defineNative("sqrt", sqrtNative, 1);
     defineNative("pow", powNative, 2);
     defineNative("sin", sinNative, 1);
